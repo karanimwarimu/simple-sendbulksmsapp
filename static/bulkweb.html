@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bulk SMS Sender</title>
+      <link rel="icon" href="https://www.flaticon.com/free-icons/sms" >
+
+<style>
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 1.5rem;
+  border-radius: 0;         /* no rounded corners on mobile full-screen */
+  width: 100%;              /* take full width */
+  max-width: 100%;          /* no restriction on mobile */
+  min-height: 100vh;        /* fill screen height */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Inputs and buttons */
+textarea, input, button {
+  width: 100%;
+  margin: 0.6rem 0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+textarea, input {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  resize: vertical;
+}
+
+button {
+  background: #6200ea;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #3700b3;
+}
+
+/* Toast styling */
+#toast {
+  visibility: hidden;
+  min-width: 200px;
+  margin-top: 15px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Laptop view */
+@media (min-width: 768px) {
+  .container {
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px; /* keeps it nice on desktops */
+    min-height: auto; /* no forced height */
+    margin: 2rem auto;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Bulk SMS Sender</h2>
+    
+    <textarea id="numbers" rows="12" placeholder="Paste numbers here (e.g. 1. Ian - 0722000000)"></textarea>
+    
+    <textarea id="message" rows="4" placeholder="Type your message here..."></textarea>
+    
+    <button onclick="sendBulk()">Send to All</button>
+    <button onclick="location.reload()">Reload</button>
+
+    <div id="toast"></div>
+  </div>
+
+  <script>
+   async function sendBulk() {
+  const numbersText = document.getElementById("numbers").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!numbersText || !message) {
+    showToast("Please enter numbers and a message!");
+    return;
+  }
+
+  const lines = numbersText.split("\n");
+
+  const recipients = lines.map(line => {
+  line = line.replace(/^\s*\d+\.\s*/, "").trim();
+  let name = "", mobile = "";
+  if (line.includes("-")) {
+    const parts = line.split("-");
+    name = parts[0].trim();
+    mobile = parts[1].trim();
+  } else {
+    const match = line.match(/(\d{10})$/);
+    if (match) {
+      mobile = match[1];
+      name = line.replace(match[0], "").trim();
+    }
+  }
+  return { name, mobile };
+}).filter(r => r.mobile);
+
+  const response = await fetch("/send-bulk", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ recipients, message })
+  });
+
+  const data = await response.json();
+  showToast(data.message || "Bulk SMS sent!");
+}
+
+
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      toast.innerText = msg;
+      toast.className = "show";
+      setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
+    }
+  </script>
+</body>
+</html>

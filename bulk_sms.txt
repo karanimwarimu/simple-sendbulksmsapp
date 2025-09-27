@@ -1,0 +1,39 @@
+2025-09-27 12:43:24,290 - INFO - Received bulk SMS request from IP: 127.0.0.1
+2025-09-27 12:43:24,293 - INFO - Recipients: [{'name': 'Jimmy', 'mobile': '0743809725'}, {'name': 'Breen', 'mobile': '0706906124'}, {'name': 'Dereck', 'mobile': '0726464475'}, {'name': 'Frank', 'mobile': '0725959631'}, {'name': 'Lyna', 'mobile': '0745764404'}, {'name': 'Shayani', 'mobile': '0735670180'}, {'name': 'Marion', 'mobile': '0745052822'}]
+2025-09-27 12:43:24,294 - INFO - Message: open
+2025-09-27 12:43:25,498 - INFO - Received bulk SMS request from IP: 127.0.0.1
+2025-09-27 12:43:25,499 - INFO - Recipients: [{'name': 'Jimmy', 'mobile': '0743809725'}, {'name': 'Breen', 'mobile': '0706906124'}, {'name': 'Dereck', 'mobile': '0726464475'}, {'name': 'Frank', 'mobile': '0725959631'}, {'name': 'Lyna', 'mobile': '0745764404'}, {'name': 'Shayani', 'mobile': '0735670180'}, {'name': 'Marion', 'mobile': '0745052822'}]
+2025-09-27 12:43:25,499 - INFO - Message: open
+2025-09-27 12:49:29,396 - INFO - Received bulk SMS request from IP: 127.0.0.1
+2025-09-27 12:49:29,397 - INFO - Recipients: [{'name': 'Jimmy', 'mobile': '0743809725'}, {'name': 'Breen', 'mobile': '0706906124'}, {'name': 'Dereck', 'mobile': '0726464475'}, {'name': 'Frank', 'mobile': '0725959631'}, {'name': 'Lyna', 'mobile': '0745764404'}, {'name': 'Shayani', 'mobile': '0735670180'}, {'name': 'Marion', 'mobile': '0745052822'}]
+2025-09-27 12:49:29,397 - INFO - Message: test 55
+2025-09-27 12:51:08,513 - INFO - Received bulk SMS request from IP: 192.168.100.46
+2025-09-27 12:51:08,514 - INFO - Recipients: [{'name': 'Jimmy', 'mobile': '0743809725'}, {'name': 'Breen', 'mobile': '0706906124'}, {'name': 'Dereck', 'mobile': '0726464475'}, {'name': 'Frank', 'mobile': '0725959631'}, {'name': 'Lyna', 'mobile': '0745764404'}, {'name': 'Shayani', 'mobile': '0735670180'}, {'name': 'Marion', 'mobile': '0745052822'}]
+2025-09-27 12:51:08,515 - INFO - Message: Test phone
+2025-09-27 12:55:40,807 - INFO - Received bulk SMS request from IP: 192.168.100.46
+2025-09-27 12:55:40,808 - INFO - Recipients: [{'name': 'Jimmy', 'mobile': '0743809725'}, {'name': 'Breen', 'mobile': '0706906124'}, {'name': 'Dereck', 'mobile': '0726464475'}, {'name': 'Frank', 'mobile': '0725959631'}, {'name': 'Lyna', 'mobile': '0745764404'}, {'name': 'Shayani', 'mobile': '0735670180'}, {'name': 'Marion', 'mobile': '0745052822'}]
+2025-09-27 12:55:40,809 - INFO - Message: Test phone
+2025-09-27 13:07:12,151 - INFO - Received bulk SMS request from IP: 127.0.0.1 at time : 2025-09-27 10:07:12.151794+00:00
+2025-09-27 13:07:12,152 - INFO - Recipients: [{'name': 'Jimmy', 'mobile': '0743809725'}, {'name': 'Breen', 'mobile': '0706906124'}, {'name': 'Dereck', 'mobile': '0726464475'}, {'name': 'Frank', 'mobile': '0725959631'}, {'name': 'Lyna', 'mobile': '0745764404'}, {'name': 'Shayani', 'mobile': '0735670180'}, {'name': 'Marion', 'mobile': '0745052822'}]
+2025-09-27 13:07:12,154 - INFO - Message: set it
+2025-09-27 13:07:12,829 - ERROR - Failed to send messages: 500 Server Error: Internal Server Error for url: https://quicksms.advantasms.com/api/services/sendbulk/
+2025-09-27 13:33:52,599 - INFO - Received bulk SMS request from IP: 192.168.100.46 at time : 2025-09-27 10:33:52.599631+00:00
+2025-09-27 13:33:52,600 - INFO - Recipients: [{'name': 'Ian Karan', 'mobile': '0759711993'}]
+2025-09-27 13:33:52,601 - INFO - Message: Hell
+2025-09-27 13:33:53,289 - ERROR - Failed to send messages: 500 Server Error: Internal Server Error for url: https://quicksms.advantasms.com/api/services/sendbulk/
+2025-09-27 13:44:15,840 - INFO - Received bulk SMS request from IP: 192.168.100.46 at time : 2025-09-27 10:44:15.840879+00:00
+2025-09-27 13:44:15,841 - INFO - Recipients: []
+2025-09-27 13:44:15,841 - INFO - Message: N
+2025-09-27 13:44:16,457 - ERROR - Failed to send messages: 422 Client Error: Unprocessable Entity for url: https://quicksms.advantasms.com/api/services/sendbulk/
+2025-09-27 13:44:52,657 - INFO - Received bulk SMS request from IP: 192.168.100.46 at time : 2025-09-27 10:44:52.657838+00:00
+2025-09-27 13:44:52,659 - INFO - Recipients: [{'name': 'Jimmy', 'mobile': '0743809725'}, {'name': 'Breen', 'mobile': '0706906124'}, {'name': 'Dereck', 'mobile': '0726464475'}, {'name': 'Frank', 'mobile': '0725959631'}, {'name': 'Lyna', 'mobile': '0745764404'}, {'name': 'Shayani', 'mobile': '0735670180'}, {'name': 'Marion', 'mobile': '0745052822'}]
+2025-09-27 13:44:52,660 - INFO - Message: Hello everyone , how are we doing
+2025-09-27 13:44:54,139 - ERROR - Failed to send messages: 500 Server Error: Internal Server Error for url: https://quicksms.advantasms.com/api/services/sendbulk/
+2025-09-27 13:44:56,183 - INFO - Received bulk SMS request from IP: 192.168.100.46 at time : 2025-09-27 10:44:56.183862+00:00
+2025-09-27 13:44:56,184 - INFO - Recipients: [{'name': 'Jimmy', 'mobile': '0743809725'}, {'name': 'Breen', 'mobile': '0706906124'}, {'name': 'Dereck', 'mobile': '0726464475'}, {'name': 'Frank', 'mobile': '0725959631'}, {'name': 'Lyna', 'mobile': '0745764404'}, {'name': 'Shayani', 'mobile': '0735670180'}, {'name': 'Marion', 'mobile': '0745052822'}]
+2025-09-27 13:44:56,184 - INFO - Message: Hello everyone , how are we doing
+2025-09-27 13:44:56,801 - ERROR - Failed to send messages: 500 Server Error: Internal Server Error for url: https://quicksms.advantasms.com/api/services/sendbulk/
+2025-09-27 13:45:11,087 - INFO - Received bulk SMS request from IP: 192.168.100.46 at time : 2025-09-27 10:45:11.087244+00:00
+2025-09-27 13:45:11,088 - INFO - Recipients: [{'name': '*Send to 0717783955', 'mobile': 'Ian Karani  and your receipt to 0759711993*'}, {'name': 'Damaris Kilei', 'mobile': '1000'}, {'name': 'Bernard Kibet', 'mobile': '500'}, {'name': 'Ian Karani', 'mobile': '1000(900)'}, {'name': 'Robert George', 'mobile': '500'}, {'name': 'Beffine Jahenda', 'mobile': '1000'}, {'name': 'Dennis Oyando', 'mobile': '300'}, {'name': 'John Mutua', 'mobile': '300'}, {'name': 'Gidraph Matu', 'mobile': '500'}]
+2025-09-27 13:45:11,089 - INFO - Message: 33
+2025-09-27 13:45:11,697 - ERROR - Failed to send messages: 500 Server Error: Internal Server Error for url: https://quicksms.advantasms.com/api/services/sendbulk/
