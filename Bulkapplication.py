@@ -26,7 +26,7 @@ app = FastAPI()
 BULK_SMS_URL = "https://quicksms.advantasms.com/api/services/sendbulk/"
 PARTNER_ID = "11945"
 API_KEY = "e00720e5316dafe1ed04c3fc2fe6cf4e"
-SHORTCODE = "AdvantaSM"
+SHORTCODE = "AdvantaSMS"
 # ----------------------
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
